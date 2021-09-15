@@ -38,7 +38,11 @@ $$=> E(X) = E(\mu Z + \mu) = \sigma E(Z) + \mu = \mu$$\\
 Proof $Var(X) = \sigma ^2$\\
 Letting $u = \frac{x-\mu}{\sigma}$\\
 Formula $Var(X) = \int_\infty^\infty \sum_{x}(x- \mu)^2 f(x) dx$
-$$Var(X) = E((X - \mu)^2)) =\int_\infty^\infty (x-\mu)^2 \frac{1}{\sqrt{2\pi\sigma^2}} \mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} dx $$\\
-$$       = \frac{\sigma^2}{\sqrt{2 \pi}} \int_\infty^\infty u^2 \mathrm{e}^{\frac{-u^2}{2}} dz $$
+$$Var(X) = E((X - \mu)^2)) =\int_{-\infty}^\infty (x-\mu)^2 \frac{1}{\sqrt{2\pi\sigma^2}} \mathrm{e}^{-\frac{(x-\mu)^2}{2\sigma^2}} dx $$\\
+$$       = \frac{\sigma^2}{\sqrt{2 \pi}} \int_{-\infty}^\infty u^2 \mathrm{e}^{\frac{-u^2}{2}} dz $$
+$u = t  =>   du = dt$\\
+$dv = t\mathrm{e}^{\frac{-t^2}{2}} =>    v = \mathrm{e}^{\frac{-t^2}{2}}$
+$$ Var(X) = \frac{\sigma^2}{\sqrt{2 \pi}} \big[(-t \mathrm{e}^{\frac{-t^2}{2}})\big|_{-\infty}^{\infty} + \int_{-\infty}^{\infty} \mathbf{e}^{\frac{-t^2}{2}} dt \big] = \sigma ^2$$
+
 \end{document}
 
