@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+ 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{Nguyen Minh Anh}
+\fancyfoot[LE,RO]{\thepage}
+
+\begin{document}
+\section{Gaussian Distribution and its properties}
+\textbf{Ex1}
+$\Sigma:$ symmetric, then  $\Sigma ^ {-1}$ is symmetric
+\\
+We have $\Sigma \Sigma ^ {-1} = I$\\
+$$ I = I^{T}$$
+$$ \Sigma \Sigma ^ {-1} = (\Sigma \Sigma ^ {-1})^{T}$$
+$$\Sigma \Sigma ^{-1} = (\Sigma ^ {-1}) ^ {T} \Sigma ^ {T}$$
+$$ \Sigma ^ {-1} \sigma (\Sigma ^ {-1}) = (\Sigma ^ {-1} \Sigma (\Sigma ^ {-1}))$$
+$$ \Sigma ^ {-1} = (\Sigma ^ {-1}) ^ {T}$$
+Then $\Sigma ^ {-1}$ is symmetric
+\\
+\\
+\textbf{Ex2}
+A is symmetric then eigenvectors for A corresponding to different eigenvalues must be orthogonal.\\
+2 vectors $u$ and $v$ are orthogonal if their dot product ( $u \cdot v$ ) = $u^{T} v$ = 0\\
+We have $ A u = \lambda_1 u $ \ \ \   $Av = \lambda_2 v$\\
+$$\lambda_1 (u \cdot v) = (\lambda_1 u) v = (Au)\cdot v = (Au)^{T} v = u^{T} A^{T} v = u^{T} A v = u^{T} (\lambda_2 v) = \lambda_2 u^{T}v = \lambda_2 (u \cdot v) $$
+$$\lambda_1(u \cdot v) = \lambda_2 (u \cdot v)$$
+$$(\lambda_1 - \lambda_2)(u \cdot v) = 0$$
+$\lambda_1 \ != \lambda_2, \ then \ (u \cdot v) = 0$
+\\ 
+\\ 
+\\
+\textbf{Ex3} $\Sigma = \sum_{i=i}^{D}\lambda_i u_i u_i ^{T}$ then $\Sigma ^ {-1} = \sum_{i = 1}^{D} \frac{1}{\lambda_i}u_i u_i^{T}$\\
+$\Sigma$ is real, symmetric matrix its eigenvalues\\
+We have $\Sigma = \sum_{i = 1}^{D} \lambda_i u_i u_i ^{T} = U S U ^{T}$ where $U$ is $D \times D$ matrix with eigenvector as its columns and $S$ is a diagonal matrix with the eigenvalue $\lambda$ along its diagonal\\
+Because $U$ is a orthogonal matrix $U ^ {-1} = U^{T}$\\
+$$\Sigma ^ {-1} = (U S U^{T}^{-1}) = (U^{T})^{-1}S^{-1}U^{-1} = U S^{-1} U^{T} = \sum_{i=1}^{D} \frac{1}{\lambda_i} u_i u_i^{T}$$
+\end{document}
